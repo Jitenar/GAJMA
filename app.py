@@ -1,24 +1,47 @@
+import streamlit as st
 
-from flask import Flask, render_template
+st.set_page_config(
+    page_title="Machine Learning Learning Hub",
+    layout="wide"
+)
 
-app = Flask(__name__)
+st.title("Machine Learning Learning Hub")
 
-@app.route("/")
-def home():
-    topics = [
-        "History of Machine Learning",
-        "Learning Roadmap",
-        "Data Preprocessing",
-        "Train/Test Split",
-        "Feature Scaling",
-        "Linear Regression",
-        "Decision Trees",
-        "Random Forest",
-        "Voting Classifier",
-        "TPOT AutoML"
-    ]
-    return render_template("index.html", topics=topics)
+st.write("""
+Learn Machine Learning from basics to advanced concepts.
+""")
 
-if __name__ == "__main__":
-    app.run(debug=True)
+st.header("Topics Covered")
 
+topics = [
+    "History of Machine Learning",
+    "Learning Roadmap",
+    "Data Preprocessing",
+    "Train/Test Split",
+    "Feature Scaling",
+    "Linear Regression",
+    "Decision Trees",
+    "Random Forest",
+    "Voting Classifier",
+    "TPOT AutoML"
+]
+
+for topic in topics:
+    st.markdown(f"✅ {topic}")
+
+st.header("Machine Learning Lifecycle")
+
+steps = [
+    "Problem Definition",
+    "Data Collection",
+    "Data Cleaning",
+    "Feature Engineering",
+    "Model Training",
+    "Evaluation",
+    "Deployment"
+]
+
+for i, step in enumerate(steps, start=1):
+    st.write(f"{i}. {step}")
+
+st.success("Machine Learning Learning Hub is running successfully!")
