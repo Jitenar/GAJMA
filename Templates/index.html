@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machine Learning Learning Hub</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <header class="hero">
+        <div class="container">
+            <h1>Machine Learning Learning Hub</h1>
+            <p>
+                Learn Machine Learning from basics to advanced concepts.
+                Explore algorithms, workflows, preprocessing techniques,
+                and model deployment.
+            </p>
+
+            <a href="#topics" class="btn">Explore Topics</a>
+        </div>
+    </header>
+
+    <section class="about">
+        <div class="container">
+            <h2>What is Machine Learning?</h2>
+
+            <p>
+                Machine Learning (ML) is a branch of Artificial Intelligence
+                that enables computers to learn from data and improve their
+                performance without being explicitly programmed.
+            </p>
+
+            <p>
+                ML is used in recommendation systems, image recognition,
+                fraud detection, healthcare, finance, and many other fields.
+            </p>
+        </div>
+    </section>
+
+    <section id="topics" class="topics">
+        <div class="container">
+            <h2>Topics Covered</h2>
+
+            <div class="card-container">
+
+                {% for topic in topics %}
+                <div class="card">
+                    <h3>{{ topic }}</h3>
+                    <p>
+                        Learn the fundamentals and practical applications of
+                        {{ topic }} in Machine Learning projects.
+                    </p>
+                </div>
+                {% endfor %}
+
+            </div>
+        </div>
+    </section>
+
+    <section class="lifecycle">
+        <div class="container">
+
+            <h2>Machine Learning Lifecycle</h2>
+
+            <div class="steps">
+
+                <div class="step">
+                    <h3>1. Problem Definition</h3>
+                    <p>Identify the business or research problem.</p>
+                </div>
+
+                <div class="step">
+                    <h3>2. Data Collection</h3>
+                    <p>Gather relevant data from different sources.</p>
+                </div>
+
+                <div class="step">
+                    <h3>3. Data Cleaning</h3>
+                    <p>Handle missing values and remove inconsistencies.</p>
+                </div>
+
+                <div class="step">
+                    <h3>4. Feature Engineering</h3>
+                    <p>Create useful features for model training.</p>
+                </div>
+
+                <div class="step">
+                    <h3>5. Model Training</h3>
+                    <p>Train algorithms using prepared datasets.</p>
+                </div>
+
+                <div class="step">
+                    <h3>6. Evaluation</h3>
+                    <p>Measure model performance using metrics.</p>
+                </div>
+
+                <div class="step">
+                    <h3>7. Deployment</h3>
+                    <p>Deploy the trained model into production.</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section class="algorithms">
+        <div class="container">
+
+            <h2>Popular Machine Learning Algorithms</h2>
+
+            <div class="card-container">
+
+                <div class="card">
+                    <h3>Linear Regression</h3>
+                    <p>Used for predicting continuous values.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Decision Tree</h3>
+                    <p>Creates rule-based decisions for predictions.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Random Forest</h3>
+                    <p>Ensemble learning method using multiple trees.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Support Vector Machine</h3>
+                    <p>Powerful classification algorithm.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Voting Classifier</h3>
+                    <p>Combines predictions from multiple models.</p>
+                </div>
+
+                <div class="card">
+                    <h3>TPOT AutoML</h3>
+                    <p>Automates machine learning pipeline creation.</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section class="contact">
+        <div class="container">
+            <h2>Start Learning Today</h2>
+
+            <p>
+                Build your Machine Learning journey by understanding
+                mathematics, programming, data science, and practical projects.
+            </p>
+
+            <button class="btn">
+                Learn More
+            </button>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>
+                © 2026 Machine Learning Learning Hub |
+                Built with Flask & Python
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
