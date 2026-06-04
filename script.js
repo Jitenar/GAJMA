@@ -1,1 +1,0 @@
-console.log('Machine Learning website loaded');
